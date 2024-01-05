@@ -1,0 +1,91 @@
+PROCEDURE inc(a) IS
+
+IN
+    a:=a+1;
+END
+
+PROCEDURE test(a) IS
+
+IN
+    a:=2000;
+    REPEAT
+            WRITE a;
+            inc(a);
+            WRITE a;
+    UNTIL a < 2003;
+END
+
+
+
+PROCEDURE fa(a, b) IS
+ c
+IN
+  c:=1;
+  c:=1 + a;
+  c:=c - 1;
+  a:=69;
+END
+
+PROCEDURE fb(a, b) IS
+
+IN
+  fa(a,b);
+END
+
+PROCEDURE fc(a, b) IS
+ c[100], d[21], e[12]
+IN
+  fb(a,d);
+END
+
+PROCEDURE fd(a, b) IS
+ c, d
+IN
+  fc(a,b);
+END
+
+PROCEDURE fe(a, b) IS
+ c, d, e, s ,g
+IN
+  fc(a,g);
+  fd(a,b);
+END
+
+PROGRAM IS
+ dupa_b, dupa_a[98], dupa_c
+IN
+  WRITE 888888;
+  dupa_b:=211;
+  IF
+    dupa_b > 2100
+  THEN
+    WRITE 99999;
+  ENDIF
+  WRITE 888888;
+  dupa_b :=0;
+  WHILE dupa_b < 5
+        DO
+        WRITE dupa_b;
+        inc(dupa_b);
+        WRITE dupa_b;
+  ENDWHILE
+  dupa_b :=0;
+  REPEAT
+      WRITE dupa_b;
+      inc(dupa_b);
+      WRITE dupa_b;
+      test(dupa_c);
+  UNTIL dupa_b >= 5;
+  dupa_b := 10;
+  WRITE dupa_b;
+  dupa_a[10] := 11;
+  WRITE dupa_a[10];
+  WRITE dupa_a[dupa_b];
+  dupa_c := dupa_a[dupa_b];
+  dupa_c := dupa_b - 1;
+  dupa_c := 1 - dupa_b;
+  dupa_c := dupa_b + dupa_a[10];
+  fe(dupa_b,dupa_c);
+  dupa_b := dupa_b;
+  WRITE dupa_b;
+END
